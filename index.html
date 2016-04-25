@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Control</title>
   <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/client/dist/thr0w-base.css">
+  <link rel="stylesheet" type="text/css" href="/client/thr0w-client/dist/thr0w-base.css">
   <link rel="stylesheet" type="text/css" href="app.css">
 </head>
 <body>
@@ -34,7 +34,10 @@
         </div>
         <div id="control" style="display: none;">
           <div class="control__group">All Screens</div>
-          <div class="control__item"><button id="supply" class="btn btn-default">World Food Supply</button></div>
+          <div class="control__item"><button id="map" class="btn btn-default">Interactive Map</button></div>
+          <div class="control__item"><button id="supply_world" class="btn btn-default">World Food Supply - World</button></div>
+          <div class="control__item"><button id="supply_hunger" class="btn btn-default">World Food Supply - Hunger</button></div>
+          <div class="control__item"><button id="supply_warming" class="btn btn-default">World Food Supply - Warming</button></div>
           <div class="control__item"><button id="photoshoot" class="btn btn-default">Karen Photoshoot</button></div>
           <div class="control__group">Left</div>
           <div class="control__item"><button id="left_conference" class="btn btn-default">Conference (ISFS Wall Hangout)</button></div>
@@ -55,7 +58,7 @@
       </div>
     </div>
   </div>
-  <script src="/client/dist/thr0w-base.min.js"></script>
+  <script src="/client/thr0w-client/dist/thr0w-base.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

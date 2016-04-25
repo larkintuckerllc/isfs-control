@@ -12,8 +12,14 @@
       .addEventListener('submit', login);
     document.getElementById('logout')
       .addEventListener('click', logout);
-    document.getElementById('supply')
-      .addEventListener('click', supply);
+    document.getElementById('map')
+      .addEventListener('click', map);
+    document.getElementById('supply_world')
+      .addEventListener('click', supplyWorld);
+    document.getElementById('supply_hunger')
+      .addEventListener('click', supplyHunger);
+    document.getElementById('supply_warming')
+      .addEventListener('click', supplyWarming);
     document.getElementById('photoshoot')
       .addEventListener('click', photoshoot);
     document.getElementById('left_control')
@@ -63,10 +69,28 @@
       thr0w.logout();
       window.location.reload();
     }
-    function supply() {
+    function map() {
       thr0w.thr0w(ALL_CHANNELS, {
         action: 'update',
         url: BASE_INTERNAL + '/apps/isfs-steering'
+      });
+    }
+    function supplyWorld() {
+      thr0w.thr0w(ALL_CHANNELS, {
+        action: 'update',
+        url: BASE_INTERNAL + '/apps/isfs-old'
+      });
+    }
+    function supplyHunger() {
+      thr0w.thr0w(ALL_CHANNELS, {
+        action: 'update',
+        url: BASE_INTERNAL + '/apps/isfs-old?hunger'
+      });
+    }
+    function supplyWarming() {
+      thr0w.thr0w(ALL_CHANNELS, {
+        action: 'update',
+        url: BASE_INTERNAL + '/apps/isfs-old?warming'
       });
     }
     function photoshoot() {
